@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.*;
 
+import java.util.Objects;
 import java.util.Set;
 
 
@@ -91,7 +92,7 @@ public class Publisher {
 
         Publisher publisher = (Publisher) o;
 
-        return id != null ? id.equals(publisher.id) : publisher.id == null;
+        return Objects.equals(id, publisher.id);
     }
 
     @Override
